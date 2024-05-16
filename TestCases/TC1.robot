@@ -20,3 +20,4 @@ LoginTest
 *** Keywords ***
 
 
+#robot TestCases\TC1.robot
