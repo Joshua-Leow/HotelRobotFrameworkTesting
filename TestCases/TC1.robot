@@ -8,10 +8,13 @@ Library  SeleniumLibrary
 LoginTest
     open browser    https://hotel-booking-website-1.onrender.com/   chrome
     click link   xpath://a[normalize-space()='Login']
-    input text  id:email    admin@abc.com
+    ${"email_txt"}   set variable    id:email
+    Element Should Be Visible   ${"email_txt"}
+    Element Should Be Enabled   ${"email_txt"}
+    input text  ${"email_txt"}  admin@abc.com
     input text  id:pwd  12345
     click element   xpath://button[@value='Submit']
-    title should be     upload
+    title should be     Upload
     close browser
 
 *** Keywords ***
